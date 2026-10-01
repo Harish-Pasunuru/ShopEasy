@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ShopEasy - Catalog</title>
+
+<link rel="stylesheet" href="styles.css">
+
+    </head>
+    <body>
+        <header>
+            <h1>ShopEasy</h1>
+
+
+
+<nav>
+
+  <a href="index.html">Home</a>
+
+  <a href="catalog.html">Catalog</a>
+
+  <a href="register.html">Register</a>
+
+  <a href="login.html">Login</a>
+
+  <!-- Cart link with counter -->
+
+  <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+
+</nav>
+
+        </header>
+        <main>
+            <h2>Product Catalog</h2>
+
+
+
+<!-- Product grid container (CSS Grid will be applied in styles.css) -->
+
+<section class="product-grid" aria-label="Products">
+
+
+
+  <!-- Product 1 -->
+
+  <article class="product-card" data-id="p1">
+
+    <img src="https://m.media-amazon.com/images/I/61QlOKvUE-L.jpg" alt="Wireless Headphones">
+
+    <h3>Wireless Headphones</h3>
+
+    <p class="price">$45.00</p>
+
+    <button class="add-to-cart" type="button">Add to Cart</button>
+
+  </article>
+
+
+
+  <!-- Product 2 -->
+
+  <article class="product-card" data-id="p2">
+
+    <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c21hcnQlMjB3YXRjaHxlbnwwfHwwfHx8MA%3D%3D" alt="Smart Watch">
+
+    <h3>Smart Watch</h3>
+
+    <p class="price">$79.00</p>
+
+    <button class="add-to-cart" type="button">Add to Cart</button>
+
+  </article>
+
+
+
+  <!-- Product 3 -->
+
+  <article class="product-card" data-id="p3">
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQTl5s5VbNHD0aQe5EjC9KDh_7TD_KKoRnWj5bQJnYZyOKLOpQMClkdrE&s=10" alt="Laptop Stand">
+
+    <h3>Laptop Stand</h3>
+
+    <p class="price">$25.00</p>
+
+    <button class="add-to-cart" type="button">Add to Cart</button>
+
+  </article>
+
+
+
+  <!-- Product 4 -->
+
+  <article class="product-card" data-id="p4">
+
+    <img src="https://img.magnific.com/free-photo/usb-cable-type-c-blue-background_58702-4532.jpg" alt="USB-C Cable">
+
+    <h3>USB-C Cable</h3>
+
+    <p class="price">$8.00</p>
+
+    <button class="add-to-cart" type="button">Add to Cart</button>
+
+  </article>
+
+
+
+  <!-- Product 5 -->
+
+  <article class="product-card" data-id="p5">
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl-pujpH9AqqqUTq84SWokjnFPWSsxlFAqWS7ljFrY5WzZ3PehgKQ7wAk&s=10" alt="Bluetooth Speaker">
+
+    <h3>Bluetooth Speaker</h3>
+
+    <p class="price">$39.00</p>
+
+    <button class="add-to-cart" type="button">Add to Cart</button>
+
+  </article>
+
+
+
+  <!-- Product 6 -->
+
+  <article class="product-card" data-id="p6">
+
+    <img src="https://4.imimg.com/data4/PA/GE/MY-3486883/wireless-mouse.jpg" alt="Wireless Mouse">
+
+    <h3>Wireless Mouse</h3>
+
+    <p class="price">$18.00</p>
+
+    <button class="add-to-cart" type="button">Add to Cart</button>
+
+  </article>
+
+
+
+</section>
+</main>
+<footer>
+    <p>© 2025 ShopEasy • Demo for Practical 1</p>
+</footer>
+<!-- Optional small script to update cart counter when "Add to Cart" is clicked (keeps page static otherwise)-->
+ <script>
+    document.addEventListener('click', function(e){
+        if(!e.target.classList.contains('add-to-cart')) return;
+        const countE1 = document.getElementaryById('cart-count');
+          const current = Number(countE1.textContent || 0);
+          countE1.textContent = current + 1;
+    });
+    </script>
+    </body>
+    </html>
